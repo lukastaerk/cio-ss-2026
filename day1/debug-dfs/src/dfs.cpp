@@ -16,6 +16,7 @@ bool search_from(Node* node, Node* goalnode, std::set<Node*>& nodesvisited) {
   } else if (node == goalnode) {
     return true;
   } else {
+    nodesvisited.insert(node);
     for (Node* nextnode : node->successors) {
       if (search_from(nextnode, goalnode, nodesvisited)) {
         return true;
