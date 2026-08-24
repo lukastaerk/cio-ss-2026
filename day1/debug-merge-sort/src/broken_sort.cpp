@@ -32,7 +32,7 @@ std::vector<int> merge(std::vector<int> left,
 
     while (j < std::ssize(right))
     {
-        result.push_back(right[i]);
+        result.push_back(right[j]); // fixed 
         ++j;
     }
 
